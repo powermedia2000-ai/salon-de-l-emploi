@@ -165,4 +165,27 @@ document.addEventListener('DOMContentLoaded', function() {
     animatedElements.forEach(element => {
         observer.observe(element);
     });
+
+    // ==================================
+    // RESPONSIVE WELCOME MESSAGE
+    // ==================================
+    const welcomeMessage = document.querySelector('.welcome-message');
+    if (welcomeMessage) {
+        const fullText = "Bienvenue au salon de l'emploi! Recruter, collaborer, digitaliser.";
+        const shortText = "Bienvenue au salon de l'emploi!";
+
+        const updateWelcomeMessage = () => {
+            if (window.innerWidth <= 768) { // Use 768px as the breakpoint
+                welcomeMessage.textContent = shortText;
+            } else {
+                welcomeMessage.textContent = fullText;
+            }
+        };
+
+        // Initial check on page load
+        updateWelcomeMessage();
+
+        // Update on window resize
+        window.addEventListener('resize', updateWelcomeMessage);
+    }
 });

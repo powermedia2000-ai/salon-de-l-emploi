@@ -953,6 +953,11 @@ body {
         font-size: 22px;
     }
 
+    .hero-bullets {
+        display: inline-block;
+        text-align: left;
+    }
+
     .cta-note {
         text-align: center;
     }
@@ -1002,6 +1007,10 @@ body {
         font-size: 16px; /* Smaller font size for responsive */
     }
 
+    .hero-bullets i {
+        font-size: 14px; /* Even smaller icon size for responsive */
+    }
+
     
 
     
@@ -1041,6 +1050,10 @@ body {
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0 10px; /* Reduce padding for very small screens */
+    }
+
     .banner-container {
         flex-direction: column;
         gap: 10px; /* Add some space between items */
@@ -1050,6 +1063,10 @@ body {
         text-align: center;
         margin: 0 auto; /* Override margin-right: auto and center it */
         font-size: 13px; /* Make text a bit smaller */
+    }
+
+    .hero-container {
+        padding: 0; /* Make hero full-width on small screens */
     }
 
     .hero-title {
@@ -1062,6 +1079,13 @@ body {
     
     .hero-bullets li {
         font-size: 12px; /* Even smaller font size for very small screens */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .hero-bullets i {
+        font-size: 12px; /* Even smaller icon size for very small screens */
     }
     
     .top-bar .lang-btn {
