@@ -186,6 +186,18 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.hero-sector-badge {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-left: 25px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -1011,6 +1023,13 @@ body {
         font-size: 14px; /* Even smaller icon size for responsive */
     }
 
+    .hero-sector-badge {
+        display: block;
+        margin-top: 15px;
+        margin-left: 0;
+    }
+
+
     
 
     
@@ -1079,9 +1098,8 @@ body {
     
     .hero-bullets li {
         font-size: 12px; /* Even smaller font size for very small screens */
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        display: block; /* Allow text to wrap naturally */
+        text-align: left;
     }
     
     .hero-bullets i {
